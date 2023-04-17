@@ -1,12 +1,11 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 
 public class Inventory : MonoBehaviour
 {
     [SerializeField] public List<Slot> slots = new List<Slot>();
+    public GameObject itemPrefab;
+    
     public static int selectedItem = 0;
     void Start()
     {
@@ -23,6 +22,11 @@ public class Inventory : MonoBehaviour
             
             slots[selectedItem].select();
         }
+
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            RemoveItem();
+        }
     }
     
     public bool AddItem(Item item)
@@ -33,8 +37,15 @@ public class Inventory : MonoBehaviour
         return true;
     }
 
-    public void RemoveItem(int index)
+    public void RemoveItem()
     {
-        slots[index]._item = null;
+        GameObject pickupItem = Instantiate(itemPrefab, CharacterMovement.currentTransform.position, Quaternion.identity);
+        PickupItem script = pickupItem.GetComponent<PickupItem>();
+        
+        script.disablePickuping(3);
+        script.item = slots[selectedItem]._item;
+        script.inventory = this;
+        
+        slots[selectedItem]._item = null;
     }
 }

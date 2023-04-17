@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class CharacterMovement : MonoBehaviour
 {
+	public static Transform currentTransform;
+	public static Vector2 side;
+	
 	public float moveSpeed = 5f;
 	public float jumpForce = 20f;
 	public float rollForce = 5f;
@@ -35,6 +38,9 @@ public class CharacterMovement : MonoBehaviour
 		{
 			_animator.SetBool("isJumping", false);
 		}
+
+		currentTransform = transform;
+		side = (transform.right * mx).x < 0f ? Vector2.left : Vector2.right;
 	}
 
 	void FixedUpdate()
@@ -49,7 +55,7 @@ public class CharacterMovement : MonoBehaviour
 
 		_rb.velocity = movement;
 
-		_spriteRenderer.flipX = (transform.right * mx).x < 0f;
+		_spriteRenderer.flipX = side == Vector2.left;
 		_animator.SetBool("isRunning", true);
 	}
 
