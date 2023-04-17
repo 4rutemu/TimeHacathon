@@ -1,5 +1,3 @@
-using System;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class CharacterMovement : MonoBehaviour
@@ -10,6 +8,7 @@ public class CharacterMovement : MonoBehaviour
 	public float moveSpeed = 5f;
 	public float jumpForce = 20f;
 	public float rollForce = 5f;
+	public LayerMask groundLayerMask;
 
 
 	private Rigidbody2D _rb;
@@ -30,7 +29,7 @@ public class CharacterMovement : MonoBehaviour
 	{
 		mx = Input.GetAxisRaw("Horizontal");
 		
-		if (Input.GetButtonDown("Jump") && isGrounded())
+		if (Input.GetKeyDown(KeyCode.Space) && isGrounded())
 		{
 			Jump();
 		}
@@ -69,13 +68,13 @@ public class CharacterMovement : MonoBehaviour
 	
 	public bool isGrounded()
 	{
-		Vector2 position = gameObject.transform.position;
+		Vector2 position = _rb.position;
 		Vector2 direction = Vector2.down;
-		float distance = 0.3f;
+		float distance = 0.25f;
     
-		RaycastHit2D hit = Physics2D.Raycast(position, direction, distance);
+		RaycastHit2D hit = Physics2D.Raycast(position, direction, distance, groundLayerMask);
 		if (hit.collider != null) {
-			_animator.SetBool("isJumping", false);
+			_animator.SetBool("isJumping", true);
 			return true;
 		}
     

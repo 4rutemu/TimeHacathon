@@ -39,6 +39,8 @@ public class Inventory : MonoBehaviour
 
     public void RemoveItem()
     {
+        if(slots[selectedItem]._item == null) return;
+        
         GameObject pickupItem = Instantiate(itemPrefab, CharacterMovement.currentTransform.position, Quaternion.identity);
         PickupItem script = pickupItem.GetComponent<PickupItem>();
         

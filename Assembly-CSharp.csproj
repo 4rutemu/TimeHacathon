@@ -49,7 +49,9 @@
      <Compile Include="Assets\Scripts\UI\Item.cs" />
      <Compile Include="Assets\Scripts\CharacterMovement.cs" />
      <Compile Include="Assets\Scripts\Activator.cs" />
+     <Compile Include="Assets\Scripts\RevertTime.cs" />
      <Compile Include="Assets\Scripts\CharacterPush.cs" />
+     <Compile Include="Assets\Scripts\TimeObject.cs" />
      <Compile Include="Assets\Scripts\ActivationScripts\PillarDoor.cs" />
      <Compile Include="Assets\Scripts\UI\PickupItem.cs" />
      <Compile Include="Assets\Scripts\UI\Inventory.cs" />
