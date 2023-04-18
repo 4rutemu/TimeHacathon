@@ -2,10 +2,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UIElements;
+using UnityEngine.UI;
 
 public class RevertTime : MonoBehaviour
 {
+
+    public Image button;
+    public Sprite nonPressed;
+    public Sprite pressed;
+    
     public static int savedTransformsLimit = 100;
     public static List<TimeObject> revertedObjects = new List<TimeObject>();
     
@@ -16,6 +21,7 @@ public class RevertTime : MonoBehaviour
         
         if (!isReverting && Input.GetKeyDown(KeyCode.R))
         {
+            button.sprite = pressed;
             Revert();
         }
     }
@@ -37,7 +43,7 @@ public class RevertTime : MonoBehaviour
         if (revertedObject.gameObject.tag.Equals("Player"))
         {
             animator = revertedObject.GetComponent<Animator>();
-            animator.SetBool("isReverted", true);
+            animator.SetBool("isReverting", true);
             animator.Play("Revert");
         }
         foreach (Vector3 revertedObjectPosition in revertedObject.positions)
@@ -46,6 +52,7 @@ public class RevertTime : MonoBehaviour
             yield return new WaitForSeconds(0.01f);
         }
         revertedObject.positions.Clear();
-        animator.SetBool("isReverted",false);
+        if(animator != null) animator.SetBool("isReverting",false);
+        button.sprite = nonPressed;
     }
 }

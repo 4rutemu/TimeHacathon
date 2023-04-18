@@ -5,11 +5,13 @@ public class Activator : MonoBehaviour
 {
     
     public bool activated;
+    [SerializeField] private int layer;
     
     [SerializeField] Sprite activatedSprite;
     [SerializeField] Sprite deactivatedSprite;
     [SerializeField] UnityEvent activationAction;
     [SerializeField] UnityEvent deactivationAction;
+    
     
     void Update()
     {
@@ -18,6 +20,7 @@ public class Activator : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D col)
     {
+        if(col.gameObject.layer != layer) return;
         activated = true;
         gameObject.GetComponent<SpriteRenderer>().sprite = activatedSprite;
         activationAction.Invoke();
@@ -25,6 +28,7 @@ public class Activator : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D col)
     {
+        if(col.gameObject.layer != layer) return;
         activated = false;
         gameObject.GetComponent<SpriteRenderer>().sprite = deactivatedSprite;
         deactivationAction.Invoke();

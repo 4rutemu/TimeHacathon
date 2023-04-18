@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem.LowLevel;
 
 public class CharacterPush : MonoBehaviour
 {
@@ -17,35 +18,64 @@ public class CharacterPush : MonoBehaviour
     
     void Update()
     {
-        isPushing();
+        bool isPull = isPulling();
+        bool isPush = isPushing();
         
+        if (isPull)
+        {
+            if(CharacterMovement.currentVelocity != Vector2.zero) _animator.Play("Pull");
+            _animator.SetBool("isPulling", isPull);
+        }
+        else if (!isPull && isPush)
+        {
+            if(CharacterMovement.currentVelocity != Vector2.zero) _animator.Play("Push");
+            _animator.SetBool("isPushing", isPush);
+        }
+        else
+        {
+            _animator.SetBool("isPulling", false);
+            _animator.SetBool("isPushing", false);
+        }
     }
     
     
     
-    public void isPushing()
+    public bool isPushing()
     {
-        if (Input.GetAxisRaw("Horizontal") == 0f)
-        {
-            _animator.SetBool("isPushing", false);
-            return;
-        }
-        
         Vector2 position = _rigidbody.transform.position;
         float distance = 0.1f;
     
-        RaycastHit2D leftHit = Physics2D.Raycast(position, Vector2.left, distance, layerMask);
-        if (leftHit.collider != null) {
-            _animator.SetBool("isPushing", true);
-            return;
+        RaycastHit2D hit = Physics2D.Raycast(position, CharacterMovement.side, distance, layerMask);
+        if (hit.collider != null) {
+            return true;
         }
+        return false;
+    }
+
+    public bool isPulling()
+    {
+        if (!Input.GetMouseButton(0)) return false;
         
-        RaycastHit2D rightHit = Physics2D.Raycast(position, Vector2.right, distance, layerMask);
-        if (rightHit.collider != null) {
-            _animator.SetBool("isPushing", true);
-            return;
+        Vector2 position = _rigidbody.transform.position;
+        float distance = 0.1f;
+        
+        RaycastHit2D left = Physics2D.Raycast(position, Vector2.left, distance, layerMask);
+        if (left.collider != null)
+        {
+            GameObject gameObject = left.collider.gameObject;
+            gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(CharacterMovement.currentVelocity.x * -0.3f,
+                CharacterMovement.currentVelocity.y * -0.3f);
+            return true;
         }
-        
-        _animator.SetBool("isPushing", false);
+        RaycastHit2D right = Physics2D.Raycast(position, Vector2.right, distance, layerMask);
+        if (right.collider != null)
+        {
+            GameObject gameObject = right.collider.gameObject;
+            gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(CharacterMovement.currentVelocity.x * -0.3f,
+                CharacterMovement.currentVelocity.y * -0.3f);
+            return true;
+        }
+
+        return false;
     }
 }

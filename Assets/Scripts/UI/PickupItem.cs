@@ -14,6 +14,14 @@ public class PickupItem : MonoBehaviour
         gameObject.GetComponent<SpriteRenderer>().sprite = item.itemIcon;
     }
 
+    private void OnCollisionEnter2D(Collision2D col)
+    {
+        if(!canPickup) return;
+        if(!col.gameObject.tag.Equals("Player")) return;
+        if(inventory.AddItem(item) == false) return;
+        Destroy(gameObject);
+    }
+
     private void OnTriggerEnter2D(Collider2D col)
     {
         if(!canPickup) return;
@@ -22,13 +30,13 @@ public class PickupItem : MonoBehaviour
         Destroy(gameObject);
     }
 
-    public void disablePickuping(int seconds)
+    public void disablePickuping(float seconds)
     {
         canPickup = false;
         StartCoroutine(DisablePickuping(seconds));
     }
 
-    private IEnumerator DisablePickuping(int seconds)
+    private IEnumerator DisablePickuping(float seconds)
     {
         yield return new WaitForSeconds(seconds);
         canPickup = true;

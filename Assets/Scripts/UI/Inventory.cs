@@ -44,7 +44,7 @@ public class Inventory : MonoBehaviour
         GameObject pickupItem = Instantiate(itemPrefab, CharacterMovement.currentTransform.position, Quaternion.identity);
         PickupItem script = pickupItem.GetComponent<PickupItem>();
         
-        script.disablePickuping(3);
+        script.disablePickuping(0.3f);
         script.item = slots[selectedItem]._item;
         script.inventory = this;
         

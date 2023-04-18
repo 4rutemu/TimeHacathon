@@ -4,6 +4,7 @@ public class CharacterMovement : MonoBehaviour
 {
 	public static Transform currentTransform;
 	public static Vector2 side;
+	public static Vector2 currentVelocity;
 	
 	public float moveSpeed = 5f;
 	public float jumpForce = 20f;
@@ -51,6 +52,7 @@ public class CharacterMovement : MonoBehaviour
 		}
 		
 		Vector2 movement = new Vector2(mx * moveSpeed, _rb.velocity.y);
+		currentVelocity = movement;
 
 		_rb.velocity = movement;
 

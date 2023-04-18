@@ -4,7 +4,7 @@ using UnityEngine.Serialization;
 
 public class TimeObject : MonoBehaviour
 {
-    [HideInInspector] [FormerlySerializedAs("transforms")] public List<Vector3> positions = new List<Vector3>();
+    [HideInInspector] public List<Vector3> positions = new List<Vector3>();
     void Start()
     {
         RevertTime.revertedObjects.Add(this);
@@ -13,7 +13,7 @@ public class TimeObject : MonoBehaviour
     void FixedUpdate()
     {   
         if(RevertTime.isReverting) return;
-        if(positions.Contains(transform.position)) return;
+        if(positions.Contains(transform.position)) return; //!!!
         if (positions.Count >= RevertTime.savedTransformsLimit)
         {
             positions.RemoveAt(99);
