@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class SwapTime : MonoBehaviour
 {
+    public static SwapTime instance;
+    
     public Image button;
     public Sprite nonPressed;
     public Sprite pressed;
@@ -15,6 +17,12 @@ public class SwapTime : MonoBehaviour
 
     public GameObject timePicker;
     public GameObject selector;
+    
+    
+    private void Start()
+    {
+        instance = this;
+    }
     
     void Update()
     {

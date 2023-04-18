@@ -5,6 +5,7 @@ public class CharacterMovement : MonoBehaviour
 	public static Transform currentTransform;
 	public static Vector2 side;
 	public static Vector2 currentVelocity;
+	public static GameObject playerObject;
 	
 	public float moveSpeed = 5f;
 	public float jumpForce = 20f;
@@ -22,6 +23,7 @@ public class CharacterMovement : MonoBehaviour
 		_rb = gameObject.GetComponent<Rigidbody2D>();
 		_animator = gameObject.GetComponent<Animator>();
 		_spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+		playerObject = gameObject;
 	}
 
 

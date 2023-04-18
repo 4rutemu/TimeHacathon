@@ -28,7 +28,7 @@ public class CharacterPush : MonoBehaviour
         }
         else if (!isPull && isPush)
         {
-            if(CharacterMovement.currentVelocity != Vector2.zero) _animator.Play("Push");
+            if(Input.GetAxisRaw("Horizontal") != 0) _animator.Play("Push");
             _animator.SetBool("isPushing", isPush);
         }
         else
@@ -54,7 +54,7 @@ public class CharacterPush : MonoBehaviour
 
     public bool isPulling()
     {
-        if (!Input.GetMouseButton(0)) return false;
+        if (!Input.GetMouseButton(1)) return false;
         
         Vector2 position = _rigidbody.transform.position;
         float distance = 0.1f;

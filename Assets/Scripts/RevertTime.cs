@@ -1,4 +1,5 @@
 
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,14 +7,14 @@ using UnityEngine.UI;
 
 public class RevertTime : MonoBehaviour
 {
-
     public Image button;
     public Sprite nonPressed;
     public Sprite pressed;
     
     public static int savedTransformsLimit = 100;
     public static List<TimeObject> revertedObjects = new List<TimeObject>();
-    
+    public static List<TimeObject> destroyedObjects = new List<TimeObject>();
+     
     public static bool isReverting = false;
     
     private void Update()
@@ -33,6 +34,12 @@ public class RevertTime : MonoBehaviour
         {
             StartCoroutine(revertPositions(revertedObject));
         }
+        
+        foreach (TimeObject destroyedObject in destroyedObjects)
+        {
+            destroyedObject.Restore();
+        }
+        destroyedObjects.Clear();
 
         isReverting = false;
     }

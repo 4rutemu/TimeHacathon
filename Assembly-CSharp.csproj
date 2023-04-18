@@ -82,6 +82,7 @@
      <Compile Include="Assets\Scripts\ActivationScripts\PillarDoor.cs" />
      <Compile Include="Assets\Scripts\UI\PickupItem.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_B.cs" />
+     <Compile Include="Assets\Scripts\PunchSystem.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SkewTextExample.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshProFloatingText.cs" />
@@ -96,6 +97,7 @@
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <Folder Include="Assets\TextMesh Pro\Examples &amp; Extras\Sprites" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
+     <Folder Include="Assets\Prefabs\Particles" />
      <Folder Include="Assets\TextMesh Pro\Sprites" />
      <Folder Include="Assets\UI\Paper UI Pack\Paper UI\Paper Content Appear Animation\Folding &amp; Cutout\6 Player HUD" />
      <Folder Include="Assets\UI\Paper UI Pack\Paper UI\Paper Content Appear Animation\Plain\2 item Holder" />
@@ -106,12 +108,14 @@
      <Folder Include="Assets\UI\Paper UI Pack\Paper UI\Paper Content Appear Animation\Plain\3 Rewards\1" />
      <Folder Include="Assets\UI\Paper UI Pack\Paper UI\Paper Content Appear Animation\Folding &amp; Cutout\4 Notification\2" />
      <Folder Include="Assets\Scripts\UI\Items" />
+     <Folder Include="Assets\Prefabs\Activators" />
      <Folder Include="Assets\UI\Paper UI Pack\Paper UI\Paper Content Appear Animation\Folding &amp; Cutout\3 Rewards\1" />
      <Folder Include="Assets\UI\Paper UI Pack\Paper UI\Paper Content Appear Animation\Plain\1 Headers\3" />
      <Folder Include="Assets\UI\Day &amp; Night Cycle\Items Holder\2\2 Day" />
      <Folder Include="Assets\UI\Day &amp; Night Cycle\Items Holder" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
      <Folder Include="Assets\UI\Paper UI Pack\Paper UI\Paper Content Appear Animation\Plain\4 Notification\1" />
+     <Folder Include="Assets\Prefabs\Inventory" />
      <Folder Include="Assets\UI\Paper UI Pack\Paper UI\Paper Content Appear Animation\Plain\1 Headers\4" />
      <Folder Include="Assets\UI\Paper UI Pack\Paper UI\Paper Content Appear Animation\Plain\7 Dialogue Box" />
      <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Oswald-Bold - OFL.txt" />
@@ -218,6 +222,7 @@
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
      <Folder Include="Assets\UI\Paper UI Pack\Paper UI\Folding &amp; Cutout\6 Player HUD" />
      <Folder Include="Assets\UI\Book Desk" />
+     <Folder Include="Assets\Prefabs\MovableObj" />
      <Folder Include="Assets\UI\Paper UI Pack\Paper UI\Paper Content Appear Animation\Plain\1 Headers\2" />
      <Folder Include="Assets\UI\Content\10 Banners &amp; Headers\Cutout" />
      <Folder Include="Assets\UI\Day &amp; Night Cycle\Items Holder\1\4 Night" />
