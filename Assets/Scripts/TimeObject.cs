@@ -75,7 +75,7 @@ public class TimeObject : MonoBehaviour
     private IEnumerator RemoveObject()
     {
         yield return new WaitForSeconds(10.1f);
-        if(!RevertTime.destroyedObjects.Contains(this)) Destroy(gameObject);
+        if(RevertTime.destroyedObjects.Contains(this)) Destroy(gameObject);
     }
     
     private IEnumerator RemoveParticles(ParticleSystem particleSystem)
