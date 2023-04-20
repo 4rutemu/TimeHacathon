@@ -5531,6 +5531,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7843171750064900415, guid: 804ae4fffb4488e449bc1259f929fe6d, type: 3}
+      propertyPath: m_Size.y
+      value: 0.32
+      objectReference: {fileID: 0}
+    - target: {fileID: 7843171750064900415, guid: 804ae4fffb4488e449bc1259f929fe6d, type: 3}
+      propertyPath: m_Offset.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7843171750064900415, guid: 804ae4fffb4488e449bc1259f929fe6d, type: 3}
+      propertyPath: m_Direction
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7873583196117191686, guid: 804ae4fffb4488e449bc1259f929fe6d, type: 3}
       propertyPath: jumpForce
       value: 2.2

@@ -1,7 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem.LowLevel;
 
 public class CharacterPush : MonoBehaviour
 {
@@ -25,16 +22,20 @@ public class CharacterPush : MonoBehaviour
         {
             if(CharacterMovement.currentVelocity != Vector2.zero) _animator.Play("Pull");
             _animator.SetBool("isPulling", isPull);
+            _animator.SetBool("isCrouch", false);
+            CharacterMovement.canCrouch = false;
         }
         else if (!isPull && isPush)
         {
             if(Input.GetAxisRaw("Horizontal") != 0) _animator.Play("Push");
             _animator.SetBool("isPushing", isPush);
+            CharacterMovement.canCrouch = false;
         }
         else
         {
             _animator.SetBool("isPulling", false);
             _animator.SetBool("isPushing", false);
+            CharacterMovement.canCrouch = true;
         }
     }
     

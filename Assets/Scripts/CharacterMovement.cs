@@ -8,6 +8,7 @@ public class CharacterMovement : MonoBehaviour
 	public static GameObject playerObject;
 
 	public static bool canMove = true;
+	public static bool canCrouch = true;
 	
 	public float moveSpeed = 5f;
 	public float jumpForce = 20f;
@@ -18,6 +19,7 @@ public class CharacterMovement : MonoBehaviour
 	private Rigidbody2D _rb;
 	private Animator _animator;
 	private SpriteRenderer _spriteRenderer;
+	private CapsuleCollider2D _collider = null;
 	
 	
 	void Start()
@@ -25,6 +27,7 @@ public class CharacterMovement : MonoBehaviour
 		_rb = gameObject.GetComponent<Rigidbody2D>();
 		_animator = gameObject.GetComponent<Animator>();
 		_spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+		_collider = gameObject.GetComponent<CapsuleCollider2D>();
 		playerObject = gameObject;
 	}
 
@@ -42,6 +45,30 @@ public class CharacterMovement : MonoBehaviour
 		else if (isGrounded())
 		{
 			_animator.SetBool("isJumping", false);
+		}
+
+		if (Input.GetKey(KeyCode.S) && canCrouch)
+		{
+			mx *= 0.5f;
+			_animator.SetBool("isCrouch", true);
+
+			_collider.size = new Vector2(0.1f, 0.2f);
+			_collider.offset = new Vector2(0.0f, -0.05f);
+			
+			if (mx == 0) _animator.Play("CrouchIdle");
+			else _animator.Play("CrouchRun");
+		}
+		else if (Input.GetKeyUp(KeyCode.S))
+		{
+			_collider.size = new Vector2(0.1f, 0.32f);
+			_collider.offset = new Vector2(0.0f, 0f);
+			_animator.SetBool("isCrouch", false);
+		}
+		else if (!canCrouch)
+		{
+			_collider.size = new Vector2(0.1f, 0.32f);
+			_collider.offset = new Vector2(0.0f, 0f);
+			_animator.SetBool("isCrouch", false);
 		}
 
 		currentTransform = transform;
