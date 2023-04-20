@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Ground
   - MovableObject
+  - Entity
+  - Object
   layers:
   - Default
   - TransparentFX

@@ -1,14 +1,10 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 public class TimeObject : MonoBehaviour
 {
-    [HideInInspector] public List<Vector3> positions = new List<Vector3>();
+    public List<Vector3> positions = new List<Vector3>();
     [SerializeField] private ParticleSystem particlesPrefab;
 
 
@@ -19,13 +15,13 @@ public class TimeObject : MonoBehaviour
         
         if(particlesPrefab == null) return;
     }
-    
+
     void FixedUpdate()
     {   
         if(RevertTime.isReverting) return;
         if(nonRecord) return;
         if(positions.Contains(transform.position)) return;
-        if (positions.Count >= RevertTime.savedTransformsLimit)
+        if (positions.Count >= RevertTime.savedTransformsLimit && !CompareTag("Player"))
         {
             positions.RemoveAt(99);
         }

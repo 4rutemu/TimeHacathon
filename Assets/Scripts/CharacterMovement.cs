@@ -6,6 +6,8 @@ public class CharacterMovement : MonoBehaviour
 	public static Vector2 side;
 	public static Vector2 currentVelocity;
 	public static GameObject playerObject;
+
+	public static bool canMove = true;
 	
 	public float moveSpeed = 5f;
 	public float jumpForce = 20f;
@@ -30,6 +32,7 @@ public class CharacterMovement : MonoBehaviour
 	private float mx;
 	private void Update()
 	{
+		if(!canMove) return;
 		mx = Input.GetAxisRaw("Horizontal");
 		
 		if (Input.GetKeyDown(KeyCode.Space) && isGrounded())
@@ -47,6 +50,7 @@ public class CharacterMovement : MonoBehaviour
 
 	void FixedUpdate()
 	{
+		if(!canMove) return;
 		if (mx == 0f)
 		{
 			_animator.SetBool("isRunning", false);
