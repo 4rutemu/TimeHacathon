@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 3558104364744045199}
   - component: {fileID: 1873740767003224634}
   - component: {fileID: 4617091931406934000}
+  - component: {fileID: 487427491326204560}
   m_Layer: 0
   m_Name: Character
   m_TagString: Player
@@ -186,8 +187,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec4b098299376a74f95680d6acb3828e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 1.5
-  jumpForce: 2
+  moveSpeed: 1.1
+  jumpForce: 2.2
   rollForce: 5
   groundLayerMask:
     serializedVersion: 2
@@ -233,6 +234,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b271105f87395a44a7f1c248b394d05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &487427491326204560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 865962428121291109}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5f9b6242f4254d4cbfa5967249bf60a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 3
+  canDamageble: 1
+  healthText: {fileID: 0}
 --- !u!1 &3621739956388495263
 GameObject:
   m_ObjectHideFlags: 0
