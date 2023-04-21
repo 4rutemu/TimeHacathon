@@ -84,6 +84,7 @@
      <Compile Include="Assets\Scripts\ActivationScripts\PillarDoor.cs" />
      <Compile Include="Assets\Scripts\UI\PickupItem.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_B.cs" />
+     <Compile Include="Assets\Checkpoint.cs" />
      <Compile Include="Assets\Scripts\PunchSystem.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SkewTextExample.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />

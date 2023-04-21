@@ -1,7 +1,5 @@
-using System;
 using System.Collections;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -57,14 +55,42 @@ public class DamageSystem : MonoBehaviour
         _animator.SetBool("isReverting",true);
         CharacterMovement.canMove = false;
         TimeObject timeObject = gameObject.GetComponent<TimeObject>();
-        
-        foreach (Vector3 position in timeObject.positions)
+        RevertTime.isReverting = true;
+
+        if (Checkpoint.lastCheckpoint != null)
         {
-            gameObject.transform.position = position;
-            yield return new WaitForSeconds(0.01f);
+            Vector3 pos = Checkpoint.lastCheckpoint.playerTransformWhileSave;
+            int i = 0;
+            foreach (Vector3 position in timeObject.positions)
+            {
+                gameObject.transform.position = position;
+                yield return new WaitForSeconds(0.01f);
+                if(position.x <= pos.x + 0.15 && position.x >= pos.x - 0.15 &&
+                   position.y <= pos.y + 0.15 && position.y >= pos.y - 0.15) break;
+                i++;
+            }
+            CharacterMovement.canMove = true;
+            canDamageble = true;
+            _animator.SetBool("isReverting",false);
+            
+            health = 3;
+            healthText.text = health.ToString();
+            
+            timeObject.positions.RemoveRange(0, i);
+            Checkpoint.lastCheckpoint = null;
+        }
+        else
+        {
+            foreach (Vector3 position in timeObject.positions)
+            {
+                gameObject.transform.position = position;
+                yield return new WaitForSeconds(0.01f);
+            }
+
+            SceneManager.LoadScene("Level");
+            CharacterMovement.canMove = true;
         }
         
-        SceneManager.LoadScene("Level");
-        CharacterMovement.canMove = true;
+        RevertTime.isReverting = false;
     }
 }
