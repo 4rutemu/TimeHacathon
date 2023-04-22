@@ -1,3 +1,4 @@
+using System.Linq;
 using UnityEngine;
 
 public class CharacterMovement : MonoBehaviour
@@ -20,6 +21,7 @@ public class CharacterMovement : MonoBehaviour
 	private Animator _animator;
 	private SpriteRenderer _spriteRenderer;
 	private CapsuleCollider2D _collider = null;
+	private SoundController _soundController;
 	
 	
 	void Start()
@@ -28,6 +30,8 @@ public class CharacterMovement : MonoBehaviour
 		_animator = gameObject.GetComponent<Animator>();
 		_spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
 		_collider = gameObject.GetComponent<CapsuleCollider2D>();
+		_soundController = gameObject.GetComponent<SoundController>();
+		
 		playerObject = gameObject;
 	}
 
@@ -63,12 +67,18 @@ public class CharacterMovement : MonoBehaviour
 			_collider.size = new Vector2(0.1f, 0.32f);
 			_collider.offset = new Vector2(0.0f, 0f);
 			_animator.SetBool("isCrouch", false);
+			_soundController.play(_soundController.crouch);
 		}
 		else if (!canCrouch)
 		{
 			_collider.size = new Vector2(0.1f, 0.32f);
 			_collider.offset = new Vector2(0.0f, 0f);
 			_animator.SetBool("isCrouch", false);
+		}
+
+		if (Input.GetKeyDown(KeyCode.S))
+		{
+			_soundController.play(_soundController.crouch);
 		}
 
 		currentTransform = transform;
@@ -91,6 +101,7 @@ public class CharacterMovement : MonoBehaviour
 
 		_spriteRenderer.flipX = side == Vector2.left;
 		_animator.SetBool("isRunning", true);
+		if(!_soundController.audioSources.Any(x => x.clip = _soundController.walk)) _soundController.play(_soundController.walk);
 	}
 
 	void Jump()
@@ -99,6 +110,7 @@ public class CharacterMovement : MonoBehaviour
 
 		_rb.velocity = movement;
 		_animator.SetBool("isJumping", true);
+		_soundController.play(_soundController.jump);
 	}
 	
 	public bool isGrounded()

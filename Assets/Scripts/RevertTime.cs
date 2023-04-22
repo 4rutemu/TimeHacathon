@@ -1,5 +1,4 @@
 
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -14,6 +13,8 @@ public class RevertTime : MonoBehaviour
     public Image objectsButton;
     public Sprite objectsNonPressed;
     public Sprite objectsPressed;
+
+    public AudioSource audioSource;
     
     public static int savedTransformsLimit = 100;
     public static List<TimeObject> revertedObjects = new List<TimeObject>();
@@ -39,6 +40,7 @@ public class RevertTime : MonoBehaviour
     private void Revert(string tag, Image button, Sprite nonPressed)
     {
         isReverting = true;
+        audioSource.pitch = -3f;
         foreach (TimeObject revertedObject in revertedObjects.FindAll(obj => obj.CompareTag(tag) || (tag == "Entity" && obj.CompareTag("Player"))))
         {
             StartCoroutine(revertPositions(revertedObject, button, nonPressed));
@@ -79,5 +81,6 @@ public class RevertTime : MonoBehaviour
         revertedObject.positions.Clear();
         if(animator != null) animator.SetBool("isReverting",false);
         button.sprite = nonPressed;
+        audioSource.pitch = 1f;
     }
 }

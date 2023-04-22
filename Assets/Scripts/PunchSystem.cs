@@ -1,23 +1,24 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PunchSystem : MonoBehaviour
 {
     private Animator _animator;
     private Rigidbody2D _rigidbody;
+    private SoundController _soundController;
     void Start()
     {
         _animator = gameObject.GetComponent<Animator>();
         _rigidbody = gameObject.GetComponent<Rigidbody2D>();
+        _soundController = gameObject.GetComponent<SoundController>();
     }
 
     private void Update()
     {
+        if(SwapTime.instance.timePicker.activeSelf) return;
         if (Input.GetMouseButtonDown(0) && Input.GetAxisRaw("Horizontal") == 0)
         {
             _animator.Play("Punch");
+            _soundController.play(_soundController.attack);
             TimeObject punchObject = canPunch();
             if (punchObject != null)
             {

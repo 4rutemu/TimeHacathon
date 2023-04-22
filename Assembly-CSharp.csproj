@@ -46,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\UI\Slot.cs" />
+     <Compile Include="Assets\Scripts\SoundController.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventHandler.cs" />
      <Compile Include="Assets\Scripts\UI\Item.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeA.cs" />
@@ -100,6 +101,7 @@
      <Folder Include="Assets" />
      <Folder Include="Assets\UI\Paper UI Pack\Paper UI\Paper Content Appear Animation\Plain\5 Mini Map" />
      <Folder Include="Assets\UI\Paper UI Pack\Paper UI\Plain\6 Player HUD" />
+     <Folder Include="Assets\Sounds" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <Folder Include="Assets\Level\Traps\Sandworm Trap\Transitions\Aseprite" />
      <Folder Include="Assets\TextMesh Pro\Examples &amp; Extras\Sprites" />
@@ -252,6 +254,7 @@
      <Folder Include="Assets\UI\Content\5 Holders" />
      <Folder Include="Assets\UI\Paper UI Pack\Paper UI\Folding &amp; Cutout\3 Item Holder" />
      <Folder Include="Assets\TextMesh Pro\Examples &amp; Extras\Prefabs" />
+     <Folder Include="Assets\Sounds\Character" />
      <Folder Include="Assets\UI\Paper UI Pack\Paper UI\Plain\10 Calander" />
      <Folder Include="Assets\Level\Traps\Punch Trap\Transition" />
      <Folder Include="Assets\UI\Paper UI Pack\Paper UI\Paper Content Appear Animation\Folding &amp; Cutout\1 Headers\4" />
