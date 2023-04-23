@@ -51,6 +51,7 @@
      <Compile Include="Assets\Scripts\CharacterMovement.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\EnvMapAnimator.cs" />
      <Compile Include="Assets\Scripts\ActivationScripts\ArrowTrap.cs" />
+     <Compile Include="Assets\Scripts\End\End.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_A.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SimpleScript.cs" />
@@ -116,6 +117,7 @@
      <Folder Include="Assets\Scripts" />
      <Folder Include="Assets\UI\Paper UI Pack\Paper UI\Folding &amp; Cutout\4 Notification" />
      <Folder Include="Assets\TextMesh Pro\Resources\Sprite Assets" />
+     <Folder Include="Assets\Scripts\End" />
      <Folder Include="Assets\UI\Content\7 Day &amp; Night Cycle\Items Holder" />
      <Folder Include="Assets\UI\Paper UI Pack\Paper UI\Paper Content Appear Animation\Plain\3 Rewards\1" />
      <Folder Include="Assets\UI\Paper UI Pack\Paper UI\Paper Content Appear Animation\Folding &amp; Cutout\4 Notification\2" />
@@ -126,6 +128,7 @@
      <Folder Include="Assets\Scripts\Prolog" />
      <Folder Include="Assets\UI\Paper UI Pack\Paper UI\Paper Content Appear Animation\Folding &amp; Cutout\3 Rewards\1" />
      <Folder Include="Assets\Level\Traps\Magic trap" />
+     <Folder Include="Assets\Settings" />
      <Folder Include="Assets\Level\Traps\Magic trap\Transition" />
      <Folder Include="Assets\UI\Paper UI Pack\Paper UI\Paper Content Appear Animation\Plain\1 Headers\3" />
      <Folder Include="Assets\UI\Day &amp; Night Cycle\Items Holder\2\2 Day" />
@@ -167,6 +170,7 @@
      <Folder Include="Assets\Character\Animations" />
      <Folder Include="Assets\Level\Traps\Fire Breather Trap\PNGs" />
      <Folder Include="Assets\UI\Paper UI Pack\Paper UI\Paper Content Appear Animation\Folding &amp; Cutout\7 Dialogue Box" />
+     <Folder Include="Assets\Scenes\Level" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
      <Folder Include="Assets\UI\Day &amp; Night Cycle\Items Holder\1\7 Raining" />
      <Folder Include="Assets\UI\Paper UI Pack\Paper UI\Paper Content Appear Animation\Plain" />

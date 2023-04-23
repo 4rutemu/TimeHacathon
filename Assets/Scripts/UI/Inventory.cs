@@ -1,5 +1,7 @@
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Inventory : MonoBehaviour
 {
@@ -27,6 +29,8 @@ public class Inventory : MonoBehaviour
         {
             RemoveItem();
         }
+
+        if (slots.Count(slot => slot._item != null) == 10) SceneManager.LoadScene("End");
     }
     
     public bool AddItem(Item item)

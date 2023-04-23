@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using UnityEngine;
 
@@ -11,7 +10,10 @@ public class PickupItem : MonoBehaviour
 
     private void Start()
     {
-        gameObject.GetComponent<SpriteRenderer>().sprite = item.itemIcon;
+        SpriteRenderer renderer = gameObject.GetComponent<SpriteRenderer>();
+        renderer.sprite = item.itemIcon;
+        renderer.color = item.color;
+        renderer.sortingOrder = 5;
     }
 
     private void OnCollisionEnter2D(Collision2D col)

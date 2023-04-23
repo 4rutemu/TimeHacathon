@@ -12,7 +12,11 @@ public class Slot : MonoBehaviour
     private void Update()
     {
         itemSprite.enabled = _item != null;
-        if(_item != null) itemSprite.sprite = _item.itemIcon;
+        if (_item != null)
+        {
+            itemSprite.sprite = _item.itemIcon;
+            itemSprite.color = _item.color;
+        }
     }
 
     public void select()
