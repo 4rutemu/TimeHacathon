@@ -45,56 +45,57 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.2.8f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\UI\Slot.cs" />
      <Compile Include="Assets\Scripts\SoundController.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventHandler.cs" />
-     <Compile Include="Assets\Scripts\UI\Item.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeA.cs" />
      <Compile Include="Assets\Scripts\CharacterMovement.cs" />
-     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_ExampleScript_01.cs" />
-     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMPro_InstructionOverlay.cs" />
-     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeB.cs" />
-     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\DropdownSample.cs" />
-     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexColorCycler.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\EnvMapAnimator.cs" />
      <Compile Include="Assets\Scripts\ActivationScripts\ArrowTrap.cs" />
-     <Compile Include="Assets\Scripts\Activator.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_A.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SimpleScript.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark04.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ChatController.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_DigitValidator.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_FrameRateCounter.cs" />
+     <Compile Include="Assets\Scripts\UI\SmoothCamera.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshSpawner.cs" />
+     <Compile Include="Assets\Scripts\SwapTime.cs" />
+     <Compile Include="Assets\Scripts\TimeObject.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
+     <Compile Include="Assets\Scripts\UI\PickupItem.cs" />
+     <Compile Include="Assets\Scripts\Checkpoint.cs" />
+     <Compile Include="Assets\Scripts\DamageSystem.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\CameraController.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark03.cs" />
+     <Compile Include="Assets\Scripts\ActivationScripts\Trap.cs" />
+     <Compile Include="Assets\Scripts\UI\Slot.cs" />
+     <Compile Include="Assets\Scripts\UI\Item.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_ExampleScript_01.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMPro_InstructionOverlay.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeB.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\DropdownSample.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexColorCycler.cs" />
+     <Compile Include="Assets\Scripts\Activator.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ObjectSpin.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_PhoneNumberValidator.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexJitter.cs" />
-     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_DigitValidator.cs" />
-     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_FrameRateCounter.cs" />
      <Compile Include="Assets\Scripts\RevertTime.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextConsoleSimulator.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TeleType.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventCheck.cs" />
-     <Compile Include="Assets\Scripts\UI\SmoothCamera.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_UiFrameRateCounter.cs" />
-     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
-     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshSpawner.cs" />
-     <Compile Include="Assets\Scripts\SwapTime.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
+     <Compile Include="Assets\Scripts\Prolog\Prolog.cs" />
      <Compile Include="Assets\Scripts\CharacterPush.cs" />
-     <Compile Include="Assets\Scripts\TimeObject.cs" />
-     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
      <Compile Include="Assets\Scripts\ActivationScripts\PillarDoor.cs" />
-     <Compile Include="Assets\Scripts\UI\PickupItem.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_B.cs" />
-     <Compile Include="Assets\Checkpoint.cs" />
      <Compile Include="Assets\Scripts\PunchSystem.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SkewTextExample.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshProFloatingText.cs" />
-     <Compile Include="Assets\Scripts\DamageSystem.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ShaderPropAnimator.cs" />
-     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\CameraController.cs" />
-     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark03.cs" />
-     <Compile Include="Assets\Scripts\ActivationScripts\Trap.cs" />
      <Compile Include="Assets\Scripts\ActivationScripts\Arrow.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextInfoDebugTool.cs" />
      <Compile Include="Assets\Scripts\UI\Inventory.cs" />
@@ -122,6 +123,7 @@
      <Folder Include="Assets\Level\Traps\Saw Trap\PNGs" />
      <Folder Include="Assets\Level\Traps\Toxic Trap\Transitions\PNGs" />
      <Folder Include="Assets\Prefabs\Activators" />
+     <Folder Include="Assets\Scripts\Prolog" />
      <Folder Include="Assets\UI\Paper UI Pack\Paper UI\Paper Content Appear Animation\Folding &amp; Cutout\3 Rewards\1" />
      <Folder Include="Assets\Level\Traps\Magic trap" />
      <Folder Include="Assets\Level\Traps\Magic trap\Transition" />
@@ -147,6 +149,7 @@
      <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Anton OFL.txt" />
      <Folder Include="Assets\UI\Paper UI Pack\Paper UI\Paper Content Appear Animation\Plain\8 Shop" />
      <Folder Include="Assets\TextMesh Pro\Resources\Fonts &amp; Materials" />
+     <Folder Include="Assets\Sounds\Other" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
      <Folder Include="Assets\UI\Content\6 High lighter" />
      <Folder Include="Assets\Level\Traps\Fire Trap" />
@@ -954,26 +957,80 @@
      <Reference Include="Unity.2D.IK.Runtime">
      <HintPath>F:\UnityProjects\Timelapse\Library\ScriptAssemblies\Unity.2D.IK.Runtime.dll</HintPath>
      </Reference>
-     <Reference Include="PsdPlugin">
-     <HintPath>F:\UnityProjects\Timelapse\Library\ScriptAssemblies\PsdPlugin.dll</HintPath>
+     <Reference Include="Unity.RenderPipelines.Core.Runtime">
+     <HintPath>F:\UnityProjects\Timelapse\Library\ScriptAssemblies\Unity.RenderPipelines.Core.Runtime.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Burst.Editor">
      <HintPath>F:\UnityProjects\Timelapse\Library\ScriptAssemblies\Unity.Burst.Editor.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.Burst">
-     <HintPath>F:\UnityProjects\Timelapse\Library\ScriptAssemblies\Unity.Burst.dll</HintPath>
+     <Reference Include="Unity.2D.Common.Path.Editor">
+     <HintPath>F:\UnityProjects\Timelapse\Library\ScriptAssemblies\Unity.2D.Common.Path.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.2D.PixelPerfect.Editor">
+     <HintPath>F:\UnityProjects\Timelapse\Library\ScriptAssemblies\Unity.2D.PixelPerfect.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Rider.Editor">
+     <HintPath>F:\UnityProjects\Timelapse\Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.2D.Sprite.Editor">
+     <HintPath>F:\UnityProjects\Timelapse\Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.RenderPipelines.Core.Editor">
+     <HintPath>F:\UnityProjects\Timelapse\Library\ScriptAssemblies\Unity.RenderPipelines.Core.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.VisualScripting.Flow">
+     <HintPath>F:\UnityProjects\Timelapse\Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Mathematics.Editor">
+     <HintPath>F:\UnityProjects\Timelapse\Library\ScriptAssemblies\Unity.Mathematics.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.2D.Tilemap.Extras.Editor">
+     <HintPath>F:\UnityProjects\Timelapse\Library\ScriptAssemblies\Unity.2D.Tilemap.Extras.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.RenderPipelines.Core.ShaderLibrary">
+     <HintPath>F:\UnityProjects\Timelapse\Library\ScriptAssemblies\Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Collections">
+     <HintPath>F:\UnityProjects\Timelapse\Library\ScriptAssemblies\Unity.Collections.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.2D.SpriteShape.Runtime">
+     <HintPath>F:\UnityProjects\Timelapse\Library\ScriptAssemblies\Unity.2D.SpriteShape.Runtime.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.2D.PixelPerfect">
+     <HintPath>F:\UnityProjects\Timelapse\Library\ScriptAssemblies\Unity.2D.PixelPerfect.dll</HintPath>
+     </Reference>
+     <Reference Include="PPv2URPConverters">
+     <HintPath>F:\UnityProjects\Timelapse\Library\ScriptAssemblies\PPv2URPConverters.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.TextMeshPro">
+     <HintPath>F:\UnityProjects\Timelapse\Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.RenderPipelines.Universal.Editor">
+     <HintPath>F:\UnityProjects\Timelapse\Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary">
+     <HintPath>F:\UnityProjects\Timelapse\Library\ScriptAssemblies\Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
+     </Reference>
+     <Reference Include="PsdPlugin">
+     <HintPath>F:\UnityProjects\Timelapse\Library\ScriptAssemblies\PsdPlugin.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.RenderPipelines.Universal.Runtime">
+     <HintPath>F:\UnityProjects\Timelapse\Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Runtime.dll</HintPath>
      </Reference>
      <Reference Include="Unity.PlasticSCM.Editor">
      <HintPath>F:\UnityProjects\Timelapse\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.2D.Common.Path.Editor">
-     <HintPath>F:\UnityProjects\Timelapse\Library\ScriptAssemblies\Unity.2D.Common.Path.Editor.dll</HintPath>
+     <Reference Include="Unity.Burst">
+     <HintPath>F:\UnityProjects\Timelapse\Library\ScriptAssemblies\Unity.Burst.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Timeline.Editor">
      <HintPath>F:\UnityProjects\Timelapse\Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.Shared.Editor">
      <HintPath>F:\UnityProjects\Timelapse\Library\ScriptAssemblies\Unity.VisualScripting.Shared.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.ShaderGraph.Editor">
+     <HintPath>F:\UnityProjects\Timelapse\Library\ScriptAssemblies\Unity.ShaderGraph.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualStudio.Editor">
      <HintPath>F:\UnityProjects\Timelapse\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll</HintPath>
@@ -993,20 +1050,8 @@
      <Reference Include="Unity.VisualScripting.Core.Editor">
      <HintPath>F:\UnityProjects\Timelapse\Library\ScriptAssemblies\Unity.VisualScripting.Core.Editor.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.Rider.Editor">
-     <HintPath>F:\UnityProjects\Timelapse\Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.2D.PixelPerfect.Editor">
-     <HintPath>F:\UnityProjects\Timelapse\Library\ScriptAssemblies\Unity.2D.PixelPerfect.Editor.dll</HintPath>
-     </Reference>
      <Reference Include="UnityEngine.UI">
      <HintPath>F:\UnityProjects\Timelapse\Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.2D.Sprite.Editor">
-     <HintPath>F:\UnityProjects\Timelapse\Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.VisualScripting.Flow">
-     <HintPath>F:\UnityProjects\Timelapse\Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.Flow.Editor">
      <HintPath>F:\UnityProjects\Timelapse\Library\ScriptAssemblies\Unity.VisualScripting.Flow.Editor.dll</HintPath>
@@ -1014,14 +1059,11 @@
      <Reference Include="Unity.InternalAPIEngineBridge.001">
      <HintPath>F:\UnityProjects\Timelapse\Library\ScriptAssemblies\Unity.InternalAPIEngineBridge.001.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.Mathematics.Editor">
-     <HintPath>F:\UnityProjects\Timelapse\Library\ScriptAssemblies\Unity.Mathematics.Editor.dll</HintPath>
-     </Reference>
      <Reference Include="Unity.2D.Common.Runtime">
      <HintPath>F:\UnityProjects\Timelapse\Library\ScriptAssemblies\Unity.2D.Common.Runtime.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.2D.Tilemap.Extras.Editor">
-     <HintPath>F:\UnityProjects\Timelapse\Library\ScriptAssemblies\Unity.2D.Tilemap.Extras.Editor.dll</HintPath>
+     <Reference Include="Unity.RenderPipeline.Universal.ShaderLibrary">
+     <HintPath>F:\UnityProjects\Timelapse\Library\ScriptAssemblies\Unity.RenderPipeline.Universal.ShaderLibrary.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Timeline">
      <HintPath>F:\UnityProjects\Timelapse\Library\ScriptAssemblies\Unity.Timeline.dll</HintPath>
@@ -1032,23 +1074,14 @@
      <Reference Include="Unity.VisualScripting.SettingsProvider.Editor">
      <HintPath>F:\UnityProjects\Timelapse\Library\ScriptAssemblies\Unity.VisualScripting.SettingsProvider.Editor.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.Collections">
-     <HintPath>F:\UnityProjects\Timelapse\Library\ScriptAssemblies\Unity.Collections.dll</HintPath>
+     <Reference Include="Unity.InternalAPIEditorBridge.001">
+     <HintPath>F:\UnityProjects\Timelapse\Library\ScriptAssemblies\Unity.InternalAPIEditorBridge.001.dll</HintPath>
      </Reference>
      <Reference Include="Unity.2D.Psdimporter.Editor">
      <HintPath>F:\UnityProjects\Timelapse\Library\ScriptAssemblies\Unity.2D.Psdimporter.Editor.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.InternalAPIEditorBridge.001">
-     <HintPath>F:\UnityProjects\Timelapse\Library\ScriptAssemblies\Unity.InternalAPIEditorBridge.001.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.2D.SpriteShape.Runtime">
-     <HintPath>F:\UnityProjects\Timelapse\Library\ScriptAssemblies\Unity.2D.SpriteShape.Runtime.dll</HintPath>
-     </Reference>
      <Reference Include="Unity.VisualScripting.State.Editor">
      <HintPath>F:\UnityProjects\Timelapse\Library\ScriptAssemblies\Unity.VisualScripting.State.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.2D.PixelPerfect">
-     <HintPath>F:\UnityProjects\Timelapse\Library\ScriptAssemblies\Unity.2D.PixelPerfect.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Mathematics">
      <HintPath>F:\UnityProjects\Timelapse\Library\ScriptAssemblies\Unity.Mathematics.dll</HintPath>
@@ -1056,11 +1089,14 @@
      <Reference Include="Unity.2D.Common.Editor">
      <HintPath>F:\UnityProjects\Timelapse\Library\ScriptAssemblies\Unity.2D.Common.Editor.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.TextMeshPro">
-     <HintPath>F:\UnityProjects\Timelapse\Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
+     <Reference Include="Unity.RenderPipelines.Universal.Shaders">
+     <HintPath>F:\UnityProjects\Timelapse\Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Shaders.dll</HintPath>
      </Reference>
      <Reference Include="Unity.TextMeshPro.Editor">
      <HintPath>F:\UnityProjects\Timelapse\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Searcher.Editor">
+     <HintPath>F:\UnityProjects\Timelapse\Library\ScriptAssemblies\Unity.Searcher.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.State">
      <HintPath>F:\UnityProjects\Timelapse\Library\ScriptAssemblies\Unity.VisualScripting.State.dll</HintPath>
