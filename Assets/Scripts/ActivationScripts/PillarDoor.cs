@@ -1,12 +1,12 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PillarDoor : MonoBehaviour
 {
     private Vector3 startPosition;
+    public bool up;
     public float y = 0;
+    public float x = 0;
     private void Start()
     {
         startPosition = transform.position;
@@ -28,10 +28,35 @@ public class PillarDoor : MonoBehaviour
 
     private IEnumerator openE()
     {
-        while (gameObject.transform.position.y > y)
+        if (!up)
         {
-            gameObject.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y - 0.1f, gameObject.transform.position.z);
-            yield return new WaitForSeconds(0.1f);
+            while (gameObject.transform.position.y > y)
+            {
+                gameObject.transform.position = new Vector3(gameObject.transform.position.x,
+                    gameObject.transform.position.y - 0.1f, gameObject.transform.position.z);
+                yield return new WaitForSeconds(0.1f);
+            }
+            while (gameObject.transform.position.x > x)
+            {
+                gameObject.transform.position = new Vector3(gameObject.transform.position.x - 0.1f,
+                    gameObject.transform.position.y, gameObject.transform.position.z);
+                yield return new WaitForSeconds(0.1f);
+            }
+        }
+        else
+        {
+            while (gameObject.transform.position.y < y)
+            {
+                gameObject.transform.position = new Vector3(gameObject.transform.position.x,
+                    gameObject.transform.position.y + 0.1f, gameObject.transform.position.z);
+                yield return new WaitForSeconds(0.1f);
+            }
+            while (gameObject.transform.position.x < x)
+            {
+                gameObject.transform.position = new Vector3(gameObject.transform.position.x + 0.1f,
+                    gameObject.transform.position.y, gameObject.transform.position.z);
+                yield return new WaitForSeconds(0.1f);
+            }
         }
     }
 

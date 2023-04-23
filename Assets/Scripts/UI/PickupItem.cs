@@ -22,6 +22,7 @@ public class PickupItem : MonoBehaviour
         if(!col.gameObject.tag.Equals("Player")) return;
         if(inventory.AddItem(item) == false) return;
         Destroy(gameObject);
+        SoundController.instance.play(SoundController.instance.pickup);
     }
 
     private void OnTriggerEnter2D(Collider2D col)
@@ -30,6 +31,7 @@ public class PickupItem : MonoBehaviour
         if(!col.gameObject.tag.Equals("Player")) return;
         if(inventory.AddItem(item) == false) return;
         Destroy(gameObject);
+        SoundController.instance.play(SoundController.instance.pickup);
     }
 
     public void disablePickuping(float seconds)

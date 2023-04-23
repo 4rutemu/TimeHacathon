@@ -18,7 +18,7 @@ public class Prolog : MonoBehaviour
 
     public void game()
     {
-        SceneManager.LoadScene("Level");
+        SceneManager.LoadScene("MainLVL");
     }
     
 

@@ -1,6 +1,7 @@
 
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -16,7 +17,7 @@ public class RevertTime : MonoBehaviour
 
     public AudioSource audioSource;
     
-    public static int savedTransformsLimit = 100;
+    public static int savedTransformsLimit = 250;
     public static List<TimeObject> revertedObjects = new List<TimeObject>();
     public static List<TimeObject> destroyedObjects = new List<TimeObject>();
      
@@ -61,14 +62,18 @@ public class RevertTime : MonoBehaviour
         if (revertedObject.gameObject.tag.Equals("Player"))
         {
             animator = revertedObject.GetComponent<Animator>();
+            /*revertedObject.GetComponent<Collider2D>().enabled = false;*/
             animator.SetBool("isReverting", true);
             animator.Play("Revert");
-            
-            foreach (Vector3 revertedObjectPosition in revertedObject.positions.GetRange(0, 100))
+
+            int count = savedTransformsLimit;
+            if (savedTransformsLimit > revertedObject.positions.Count()) count = revertedObject.positions.Count();
+            foreach (Vector3 revertedObjectPosition in revertedObject.positions.GetRange(0, count))
             {
                 revertedObject.transform.position = revertedObjectPosition;
                 yield return new WaitForSeconds(0.01f);
             }
+            /*revertedObject.GetComponent<Collider2D>().enabled = true;*/
         }
         else
         {

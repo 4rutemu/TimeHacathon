@@ -2,6 +2,7 @@ using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class DamageSystem : MonoBehaviour
 {
@@ -12,11 +13,23 @@ public class DamageSystem : MonoBehaviour
     private Animator _animator;
     public AudioSource audioSource;
     
+    public Image button;
+    public Sprite nonPressed;
+    public Sprite pressed;
+    
     private SoundController _soundController;
     public void Start()
     {
         _animator = GetComponent<Animator>();
         _soundController = gameObject.GetComponent<SoundController>();
+    }
+
+    public void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            Death();
+        }
     }
 
     public void Damage()
@@ -46,11 +59,13 @@ public class DamageSystem : MonoBehaviour
 
     public void Death()
     {
+        button.sprite = pressed;
         audioSource.pitch = -3f;
         canDamageble = false;
         _animator.Play("Death");
         
         StartCoroutine(restartLevel());
+        button.sprite = nonPressed;
     }
     
     private IEnumerator restartLevel()
@@ -94,7 +109,7 @@ public class DamageSystem : MonoBehaviour
                 audioSource.pitch += 0.01f;
             }
 
-            SceneManager.LoadScene("Level");
+            SceneManager.LoadScene("MainLVL");
             CharacterMovement.canMove = true;
         }
         

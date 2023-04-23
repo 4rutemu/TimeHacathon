@@ -23,7 +23,7 @@ public class TimeObject : MonoBehaviour
         if(positions.Contains(transform.position)) return;
         if (positions.Count >= RevertTime.savedTransformsLimit && !CompareTag("Player"))
         {
-            positions.RemoveAt(99);
+            positions.RemoveAt(RevertTime.savedTransformsLimit-1);
         }
         positions.Insert(0, transform.position);
     }

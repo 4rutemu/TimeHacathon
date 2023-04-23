@@ -22,6 +22,7 @@ public class SwapTime : MonoBehaviour
     private void Start()
     {
         instance = this;
+        Swap(0);
     }
     
     void Update()
@@ -54,17 +55,20 @@ public class SwapTime : MonoBehaviour
         {
             foreach (GameObject oldTimesObject in oldTime.objects)
             {
+                if(oldTimesObject == null) continue;
                 oldTimesObject.SetActive(false);
-                yield return new WaitForSeconds(0.1f);
+                /*yield return new WaitForSeconds(0.1f);*/
             }
         }
 
         foreach (GameObject newTimesObject in newTimes.objects)
         {
+            if(newTimesObject == null) continue;
             newTimesObject.SetActive(true);
-            yield return new WaitForSeconds(0.1f);
+            /*yield return new WaitForSeconds(0.1f);*/
         }
-        
+
+        yield return null;
     }
 }
 
